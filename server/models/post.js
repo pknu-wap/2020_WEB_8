@@ -17,7 +17,7 @@ const PostSchema = new mongoose.Schema({
     },
 
     fileUrl: {
-        tupe: String,
+        type: String,
         default: "https://source.unsplash.com/random/301*201"
     },
     date: {
