@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
-    "dev-watch": "babel-watch server/server.js --ignore'./client'"
+    "dev": "nodemon ./server/server.js --exec babel-node"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +25,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
-    "babel-watch": "^7.0.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
   }
 }
