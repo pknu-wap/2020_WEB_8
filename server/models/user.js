@@ -1,5 +1,5 @@
-import moment from 'moment'
 import mongoose from 'mongoose'
+import moment from 'moment'
 
 //create schema
 
@@ -45,7 +45,7 @@ const UserSchema = new mongoose.Schema({
             ref: "post",
         },
     ],  
-}),
+});
 
 const User = mongoose.model("user", UserSchema);
 
