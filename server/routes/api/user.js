@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
 // @routes     POST api/user
 // @desc       Register  user
 // @access     public
-
+//회원가입
 router.post("/", (req, res) => {
   console.log(req);
   const { name, email, password } = req.body;
