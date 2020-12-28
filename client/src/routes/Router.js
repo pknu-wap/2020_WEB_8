@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import AppNavbar from "../components/AppNavbar";
 
 const MyRouter = () => (
     <Fragment>
         <Header/>
-            <h1>Hello body</h1>   
+        <AppNavbar/> 
+            <h1>Hello body</h1>          
         <Footer/>
     </Fragment>
 )
