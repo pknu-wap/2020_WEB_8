@@ -4,12 +4,12 @@ import Footer from "../components/Footer";
 import AppNavbar from "../components/AppNavbar";
 
 const MyRouter = () => (
-    <Fragment>
-        <Header/>
-        <AppNavbar/> 
-            <h1>Hello body</h1>          
-        <Footer/>
-    </Fragment>
-)
-    
+  <Fragment>
+    <AppNavbar />
+    <Header />
+    <h1>Hello Body</h1>
+    <Footer />
+  </Fragment>
+);
+
 export default MyRouter;
