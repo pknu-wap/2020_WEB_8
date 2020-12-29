@@ -1,15 +1,13 @@
-import express, { json } from 'express';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import auth from '../../middleware/auth';
-import config from '../../config/index';
-
-const { JWT_SECRET} = config
+import express from "express";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import auth from "../../middleware/auth";
+import config from "../../config/index";
+const { JWT_SECRET } = config;
 
 //Model
 import User from "../../models/user";
-import { token } from 'morgan';
-import { getDefaultDirectives } from 'helmet/dist/middlewares/content-security-policy';
+
 
 const router = express.Router();
 

@@ -5,6 +5,7 @@ import hpp from "hpp";
 import helmet from "helmet";
 import cors from "cors";
 
+
 // Routes
 import postsRoutes from "./routes/api/post";
 import userRoutes from "./routes/api/user";
@@ -30,12 +31,12 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+    useFindAndModify: false
   })
   .then(() => console.log("MongoDB connecting Success!!"))
   .catch((e) => console.log(e));
 
 //use routes
-app.get("/")
 app.use("/api/post", postsRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
