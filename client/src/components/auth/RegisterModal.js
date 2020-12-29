@@ -1,11 +1,19 @@
-import { Button } from "bootstrap";
-import React, {useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { FormGroup, Input, ModalBody, ModalHeader, NavLink } from "reactstrap";
-import { 
-    CLEAR_ERROR_REQUEST,
-    REGISTER_REQUEST,
-} from "../../redux/types";
+
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { CLEAR_ERROR_REQUEST, REGISTER_REQUEST } from "../../redux/types";
+import {
+  NavLink,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Alert,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Button,
+} from "reactstrap";
 
 const RegisterModal = () => {
     const [modal, setModal] = useState(false)
@@ -23,7 +31,7 @@ const RegisterModal = () => {
         dispatch({
             type: CLEAR_ERROR_REQUEST
         })
-        setModal(!midal);
+        setModal(!modal);
     }
 
     useEffect(() => {
@@ -57,7 +65,7 @@ const RegisterModal = () => {
             <NavLink onClick={handleToggle} href="#">
                 Register
             </NavLink>
-            <Modal isOpen={midal} toggle={handleToggle}>
+            <Modal isOpen={modal} toggle={handleToggle}>
                 <ModalHeader toggle={handleToggle}>Register</ModalHeader>
                 <ModalBody>
                     {localMsg ? <Alert color="danger"></Alert>:null}
@@ -99,3 +107,5 @@ const RegisterModal = () => {
     ) 
 
 }
+
+export default RegisterModal
