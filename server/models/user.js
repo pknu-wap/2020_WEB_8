@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ["MainJuin", "SubJuin", "User"],
+        enum: ["blacklist", "User"],
         default: "User",
     },
     register_date: {
