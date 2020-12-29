@@ -93,7 +93,7 @@ const AppNavbar = () => {
 
   return (
     <Fragment>
-      <Navbar color="dark" dark expand="lg" className="sticky-top">
+      <Navbar id="nav-bar" dark expand="lg" className="sticky-top">
       <Container>
           <Link to="/" className="text-white text-decoration-none">
             여개어때
